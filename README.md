@@ -2,6 +2,8 @@
 
 A browser-based geography game where you learn country locations by clicking on them on a world map.
 
+*** This is all created by AI. Expect inaccuracies. Primarily used Opus 4.5 ***
+
 ## How to Play
 
 1. Look at the target country name shown in the header

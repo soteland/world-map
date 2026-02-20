@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     async function loadData() {
       try {
-        const response = await fetch("/src/assets/countries.json");
+        const response = await fetch("/countries.json");
         if (!response.ok) {
           throw new Error(`Failed to load map data: ${response.statusText}`);
         }

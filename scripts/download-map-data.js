@@ -24,7 +24,7 @@ const DATA_URLS = [
   "https://unpkg.com/world-atlas@2/countries-110m.json",
 ];
 
-const OUTPUT_DIR = join(__dirname, "..", "src", "assets");
+const OUTPUT_DIR = join(__dirname, "..", "public");
 const OUTPUT_FILE = join(OUTPUT_DIR, "countries.json");
 
 /**

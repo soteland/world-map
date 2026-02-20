@@ -1,0 +1,81 @@
+.world-map-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.world-map {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.map-background {
+  fill: #e8f4fc;
+}
+
+/* Base country styling */
+.country {
+  fill: #d4d4d4;
+  stroke: #555;
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+/* Hover effect for clickable countries */
+.country:hover:not(.country--completed):not(.country--skipped) {
+  fill: #b8c4d0;
+  stroke: #333;
+  stroke-width: 0.8;
+}
+
+/* Completed countries - green */
+.country--completed {
+  fill: #4ade80;
+  stroke: #166534;
+  stroke-width: 0.6;
+  cursor: default;
+}
+
+.country--completed:hover {
+  fill: #4ade80;
+}
+
+/* Skipped countries - red/pink */
+.country--skipped {
+  fill: #fca5a5;
+  stroke: #991b1b;
+  stroke-width: 0.6;
+  cursor: default;
+}
+
+.country--skipped:hover {
+  fill: #fca5a5;
+}
+
+/* Wrong click animation - red flash */
+.country--wrong {
+  animation: wrongFlash 0.7s ease-out;
+}
+
+@keyframes wrongFlash {
+  0% {
+    fill: #ef4444;
+    stroke: #991b1b;
+    stroke-width: 1;
+  }
+  50% {
+    fill: #ef4444;
+    stroke: #991b1b;
+  }
+  100% {
+    fill: #d4d4d4;
+    stroke: #555;
+    stroke-width: 0.5;
+  }
+}

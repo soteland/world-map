@@ -1,0 +1,156 @@
+.sidebar {
+  width: 280px;
+  background: #f8fafc;
+  border-left: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 1rem;
+  background: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.sidebar-count {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.final-score {
+  padding: 1rem;
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  color: white;
+  text-align: center;
+}
+
+.final-score-title {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.final-score-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.perfect-score {
+  font-size: 1.4rem;
+}
+
+.final-score-note {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+.completed-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+.completed-empty {
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.completed-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.completed-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 2px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.completed-number {
+  color: #4ade80;
+  font-weight: 600;
+  font-size: 0.85rem;
+  min-width: 1.5rem;
+}
+
+.completed-number--skipped {
+  color: #ef4444;
+}
+
+.completed-name {
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+.completed-item--skipped {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.skipped-label {
+  color: #ef4444;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    max-height: 200px;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .completed-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.5rem;
+  }
+
+  .completed-item {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+  }
+}
